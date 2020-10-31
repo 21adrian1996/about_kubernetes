@@ -1,2 +1,2 @@
-# about_kubernetes
-Intro to kubernetes
+# Kubernetes Intro 
+This repo contains an overview about kubernetes.
