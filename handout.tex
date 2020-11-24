@@ -1,3 +1,4 @@
+% !BIB TS-program = biber
 \documentclass[12pt]{article}
 
 \usepackage{listings}
@@ -13,6 +14,10 @@
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{float}
+
+\usepackage[sorting=none]{biblatex}
+
+\addbibresource{references.bib}
 
 \setlength{\parindent}{0pt}
 
@@ -41,7 +46,10 @@
 	
 	\input{templates/titlepage}
 	\input{templates/table_of_contents}
+	\input{templates/intro}
 	\input{templates/overview}
 	\input{templates/architecture}
+	\input{templates/example}
+	\printbibliography
 	
 \end{document}
