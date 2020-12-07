@@ -1,14 +1,14 @@
 \section{Beispiels-Applikation in einem Kubernetes Cluster}
-Zur Darstellung, welche Überlegungen zur Erstellung eines Kubernetes Clusters alle eine Rolle spielen, haben wir eine kleine Beispielsapplikation in einem Cluster aufgeschalten.
+Zur Darstellung, welche Überlegungen zur Erstellung eines Kubernetes Clusters alle eine Rolle spielen, haben wir eine kleine Beispielsapplikation in einem Cluster aufgeschaltet.
 
 Dabei handelt es sich um eine einfache Vue.js Applikation.
 
-\subsection{Manged oder selber verwaltet}
-Die erste Frage die wir uns stellen müssen ist, ob wir einen manageded Kubernetes Cluster bestellen, oder ob wir Kubernetes auf einigen bare metal Servern selber betreieben.
-Dies ist oft auch eine kostenfrage, da die managedServer meist deutlich teuerer sind als ein selber betriebener Cluster. Für unser Beispiel wollen wir unseren Cluster selber aufsetzen, da es hier auch um den Lerneffekt geht.
+\subsection{Managed oder selber verwaltet}
+Die erste Frage die wir uns stellen müssen ist, ob wir einen managed Kubernetes Cluster bestellen, oder ob wir Kubernetes auf einigen bare metal Servern selber betreiben.
+Dies ist oft auch eine Kostenfrage, da die managed Server meist deutlich teuerer sind als ein selber betriebener Cluster. Für unser Beispiel wollen wir unseren Cluster selber aufsetzen, da es hier auch um den Lerneffekt geht.
 
 \subsection{Hoster / Cloud-Anbieter}
-Als nächstes müssen wir uns überlegen bei welchem Cloud Anbieter oder Hoster wir den Cluster betreiben wollen. Hier ist die Auswahl sehr gross, da mittlerweile praktisch alle grossen Anbieter entweder direkt Kubernetes oder mindestens eifach skalierbare Server bereitstellen können. 
+Als nächstes müssen wir uns überlegen bei welchem Cloud Anbieter oder Hoster wir den Cluster betreiben wollen. Hier ist die Auswahl sehr gross, da mittlerweile praktisch alle grossen Anbieter entweder direkt Kubernetes oder mindestens skalierbare Server bereitstellen können. 
 In unserem Beispiel wählen wir, wieder aus kostengründen, die Hetzner Cloud.
 
 \subsection{Einrichten Cluster}
@@ -27,14 +27,14 @@ Damit wir im Kubernetes Cluster eine Applikation betreiben können, benötigen w
 Dieses erstellen wir einfach mittels dem docker build Befehl.
 
 \subsection{Speicherung von Images}
-Unsere Docker Images müssen wir in einer Registry speichern, damit diese von Kubernetes gelesen werden können. Hier gibt es ebenfalls verschiedene Anbieter. Ebenfalls können die Images direkt in der GitHub oder GitLab Registry gespeichert werden.
+Unsere Docker Images müssen wir in einer Registry speichern, damit diese von Kubernetes gelesen werden können. Hier gibt es verschiedene Anbieter. Ebenfalls können die Images direkt in der GitHub oder GitLab Registry gespeichert werden.
 Somit könnte das Erstellen eines Images auch direkt über GitHub/GitLab Pipelines automatisch erstellt werden.
 Wir verwenden in unserem Beispiel DockerHub, da dies die Standradregistry von Docker Images ist.
 
 Dazu kann auf DockerHub ein Account erstellt werden. Anschliessend können wir das lokal erstellte Image einfach auf DockerHub pushen.
 
 \subsection{Deployment auf den Cluster}
-Damit wir nun unser Image im Cluster veröffentlichen können, müssen wir zuerst ein Deployment schreiben. Anschlissend erstellen wir im Kubernetes ebenfalls einen Service. Damit wir dies nun auf eine Domain mappen können, erstellen wir auch eine Ingress Konfiguration, die es uns ermöglicht die Domain zu unsererm Service zu mappen.
+Damit wir nun unser Image im Cluster veröffentlichen können, müssen wir zuerst ein Deployment schreiben. Anschliessend erstellen wir im Kubernetes ebenfalls einen Service. Damit wir dies nun auf eine Domain mappen können, erstellen wir auch eine Ingress Konfiguration, die es uns ermöglicht die Domain zu unserem Service zu mappen.
 Somit müssen wir nur noch den A-Eintrag in der DNS Zone von unserer Domain auf die IP unseres Master Server mappen.
 
 
