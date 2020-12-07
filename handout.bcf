@@ -2186,6 +2186,18 @@
     <bcf:citekey order="2">syseleven:kubernetes</bcf:citekey>
     <bcf:citekey order="3">cloudowski:openshift</bcf:citekey>
     <bcf:citekey order="4">docker:swarm</bcf:citekey>
+    <bcf:citekey order="5">kubernetes</bcf:citekey>
+    <bcf:citekey order="6">kubernetes</bcf:citekey>
+    <bcf:citekey order="7">kubernetes</bcf:citekey>
+    <bcf:citekey order="8">kubernetes</bcf:citekey>
+    <bcf:citekey order="9">kubernetes</bcf:citekey>
+    <bcf:citekey order="10">kubernetes</bcf:citekey>
+    <bcf:citekey order="11">kubernetes</bcf:citekey>
+    <bcf:citekey order="12">kubernetes</bcf:citekey>
+    <bcf:citekey order="13">kubernetes</bcf:citekey>
+    <bcf:citekey order="14">kubernetes</bcf:citekey>
+    <bcf:citekey order="15">kubernetes</bcf:citekey>
+    <bcf:citekey order="16">kubernetes</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

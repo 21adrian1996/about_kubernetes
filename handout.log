@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  24 NOV 2020 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.12)  7 DEC 2020 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,18 +617,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1]) (./templates/intro.tex [2]) (./templates/overview.tex
 [3
 
-] [4]) (./templates/architecture.tex [5
+] [4]) (./templates/architecture.tex
+<media/architektur.png, id=23, 1250.6725pt x 553.06625pt>
+File: media/architektur.png Graphic file (type png)
+<use media/architektur.png>
+Package pdftex.def Info: media/architektur.png  used on input line 3.
+(pdftex.def)             Requested size: 321.69395pt x 142.26378pt.
+ [5
 
-]) (./templates/example.tex [6
+ <./media/architektur.png>] [6]
+[7]) (./templates/example.tex
+Overfull \hbox (9.92488pt too wide) in paragraph at lines 17--18
+[]\OT1/cmr/m/n/12 Grunds[]atzlich muss da-zu nur das Tool in-stal-liert wer-den
+ und mit-tels To-ken mit der gew[]unschten
+ []
 
-])
+[8
+
+] [9])
 Overfull \hbox (11.507pt too wide) in paragraph at lines 54--54
 \OT1/cmr/m/n/12 2019. \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 h
 ttps : / / cloudowski . com / articles / 10 -[] differences -[] between -[] ope
 nshift -[]
  []
 
-[7
+[10
 
 ] (./handout.aux)
 Package logreq Info: Writing requests to 'handout.run.xml'.
@@ -636,10 +649,10 @@ Package logreq Info: Writing requests to 'handout.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12310 strings out of 481239
- 211369 string characters out of 5920377
- 866397 words of memory out of 5000000
- 27419 multiletter control sequences out of 15000+600000
+ 12320 strings out of 481239
+ 211616 string characters out of 5920377
+ 867447 words of memory out of 5000000
+ 27427 multiletter control sequences out of 15000+600000
  538007 words of font info for 43 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  36i,11n,45p,1132b,1666s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -650,10 +663,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on handout.pdf (8 pages, 139234 bytes).
+Output written on handout.pdf (11 pages, 543299 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,9 +1,44 @@
 \section{Beispiels-Applikation in einem Kubernetes Cluster}
-Für unser Beispiel haben wir eine simple Applikation gewählt, die aus den folgenden Containern besteht:
+Zur Darstellung, welche Überlegungen zur Erstellung eines Kubernetes Clusters alle eine Rolle spielen, haben wir eine kleine Beispielsapplikation in einem Cluster aufgeschalten.
 
-Vue.js Frontend Container
-Django Backend Container
-Postgres Datenbank Container
+Dabei handelt es sich um eine einfache Vue.js Applikation.
 
-Diese Aplliaktion soll nun bei Hetzner in einem Kubernetes Cluster betrieben werden.
+\subsection{Manged oder selber verwaltet}
+Die erste Frage die wir uns stellen müssen ist, ob wir einen manageded Kubernetes Cluster bestellen, oder ob wir Kubernetes auf einigen bare metal Servern selber betreieben.
+Dies ist oft auch eine kostenfrage, da die managedServer meist deutlich teuerer sind als ein selber betriebener Cluster. Für unser Beispiel wollen wir unseren Cluster selber aufsetzen, da es hier auch um den Lerneffekt geht.
+
+\subsection{Hoster / Cloud-Anbieter}
+Als nächstes müssen wir uns überlegen bei welchem Cloud Anbieter oder Hoster wir den Cluster betreiben wollen. Hier ist die Auswahl sehr gross, da mittlerweile praktisch alle grossen Anbieter entweder direkt Kubernetes oder mindestens eifach skalierbare Server bereitstellen können. 
+In unserem Beispiel wählen wir, wieder aus kostengründen, die Hetzner Cloud.
+
+\subsection{Einrichten Cluster}
+Für die Installation bei Hetzner gibt es auf GitHub das https://github.com/xetys/hetzner-kube Tool. Über dieses können wir bei Hetzner automatisiert einen Kubernetes Cluster erstellen. Dabei erstellt das Tool einen Master und einen Worker Server. Die Kosten dafür belaufen sich auf weniger als 5 Euro monatlich für dieses Setup. Natürlich müssten in einem professionellen Setup mehrerer Worker Server verfügbar sein.
+
+Grundsätzlich muss dazu nur das Tool installiert werden und mittels Token mit der gewünschten Cloud verbunden werden. Anschliessend kann der Cluster mit den folgenden drei Befehlen erstellt werden.
+
+hetzner-kube context add aboutkubernetes
+
+hetzner-kube ssh-key add --name aboutkubernetes  
+
+hetzner-kube cluster create --name aboutkubernetes --ssh-key aboutkubernetes
+
+\subsection{Generierung von Images}
+Damit wir im Kubernetes Cluster eine Applikation betreiben können, benötigen wir diese als Image. In unserem Fall erstellen wir ein Docker Image. 
+Dieses erstellen wir einfach mittels dem docker build Befehl.
+
+\subsection{Speicherung von Images}
+Unsere Docker Images müssen wir in einer Registry speichern, damit diese von Kubernetes gelesen werden können. Hier gibt es ebenfalls verschiedene Anbieter. Ebenfalls können die Images direkt in der GitHub oder GitLab Registry gespeichert werden.
+Somit könnte das Erstellen eines Images auch direkt über GitHub/GitLab Pipelines automatisch erstellt werden.
+Wir verwenden in unserem Beispiel DockerHub, da dies die Standradregistry von Docker Images ist.
+
+Dazu kann auf DockerHub ein Account erstellt werden. Anschliessend können wir das lokal erstellte Image einfach auf DockerHub pushen.
+
+\subsection{Deployment auf den Cluster}
+Damit wir nun unser Image im Cluster veröffentlichen können, müssen wir zuerst ein Deployment schreiben. Anschlissend erstellen wir im Kubernetes ebenfalls einen Service. Damit wir dies nun auf eine Domain mappen können, erstellen wir auch eine Ingress Konfiguration, die es uns ermöglicht die Domain zu unsererm Service zu mappen.
+Somit müssen wir nur noch den A-Eintrag in der DNS Zone von unserer Domain auf die IP unseres Master Server mappen.
+
+
+Sämtliche Konfigurationsdateien befinden sich als Beispiel im GitHub Repository:
+
+https://github.com/21adrian1996/about\_kubernetes
 \clearpage

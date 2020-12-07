@@ -127,6 +127,30 @@
       \verb https://cloudowski.com/articles/10-differences-between-openshift-and-kubernetes/
       \endverb
     \endentry
+    \entry{kubernetes}{online}{}
+      \name{author}{1}{}{%
+        {{hash=30136395f01879792198317c11831ea4}{%
+           family={Kubernetes},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{30136395f01879792198317c11831ea4}
+      \strng{fullhash}{30136395f01879792198317c11831ea4}
+      \strng{bibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorbibnamehash}{30136395f01879792198317c11831ea4}
+      \strng{authornamehash}{30136395f01879792198317c11831ea4}
+      \strng{authorfullhash}{30136395f01879792198317c11831ea4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kubernetes Documentation}
+      \verb{urlraw}
+      \verb https://kubernetes.io/docs/home/
+      \endverb
+      \verb{url}
+      \verb https://kubernetes.io/docs/home/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
