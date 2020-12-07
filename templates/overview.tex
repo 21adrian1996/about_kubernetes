@@ -1,10 +1,10 @@
 \section{Übersicht}
 \subsection{Was ist Kubernetes?}
-Bei Kubernetes, kurz k8s, handelt es sich um ein Open-Source Projekt, welches seinen Existenz der Idee verschiedener Google Entwickler zu verdanken hat.
+Bei Kubernetes, kurz k8s, handelt es sich um ein Open-Source Projekt, welches seine Existenz der Idee verschiedener Google Entwickler zu verdanken hat.
 
-Dabei war die Grundidee, ein System zu erstellen, welches die Ressourcen eines Servers automatisch idealen verwenden kann.\cite{redhat:kubernetes}
+Dabei war die Grundidee, ein System zu erstellen, welches die Ressourcen eines Servers automatisch ideal verwenden kann.\cite{redhat:kubernetes}
 
-Kubernetes ist griechisch und bedeutet Steuermann. Sowie ein Steuermann die Arbeiten auf seinem Schiff verwaltet, so verwaltet Kubernetes verschiedne Container auf einem Server. Unter Verwaltung versteht sich hierbei ebenfalls die Bereitstellung und Skalierung von Containern. \cite{syseleven:kubernetes}
+Kubernetes ist griechisch und bedeutet Steuermann. Sowie ein Steuermann die Arbeiten auf seinem Schiff verrichtet, so verwaltet Kubernetes verschiedene Container auf einem Server. Unter Verwaltung versteht man hierbei ebenfalls die Bereitstellung und Skalierung von Containern. \cite{syseleven:kubernetes}
 
 Technisch spricht man dabei von einem Container-Orchestrierungs-System für Container-Applikationen.
 
@@ -12,22 +12,22 @@ Technisch spricht man dabei von einem Container-Orchestrierungs-System für Cont
 \subsubsection{Orchestrierung}
 Mittels Kubernetes können die Ressourcen auf dem Server je nach Auslastung automatisch skaliert und an die verschiedenen Container verteilt werden. Dadurch kann der Server bei hoher Auslastung weiterhin alle Container wie vom Entwickler vorgesehen betreiben.
 
-Dabei beschränkt sich Kubernetes nicht auf die Verwendung von einem einzelnen Server, sondern wird im Regelfall über mehrerer Server verteilt. So können offene Anfragen stehts an den Server weitergeleitet werden, welcher noch die notwendigen Ressourcen zur Verfügung hat.
+Dabei beschränkt sich Kubernetes nicht auf die Verwendung von einem einzelnen Server, sondern wird im Regelfall über mehrere Server verteilt. So können offene Anfragen stets an den Server weitergeleitet werden, welcher noch die notwendigen Ressourcen zur Verfügung hat.
 
 \subsubsection{Self-Healing}
-Kubernetes kennt das Prinzip von Self-Healing (Selbstheilung). Fällt ein Server oder auch nur ein laufender Container aus, erkennt Kubernetes dies und startet automatisch auf einem anderen Server den oder die fehlenden Container neu. Dadurch kann eine hohe Verfügbarkeit von Applikationen gewöhrleistet werden, da Abstürtze im System automatisch behoben werden.
+Kubernetes kennt das Prinzip von Self-Healing (Selbstheilung). Fällt ein Server oder auch nur ein laufender Container aus, erkennt Kubernetes dies und startet automatisch auf einem anderen Server den oder die fehlenden Container neu. Dadurch kann eine hohe Verfügbarkeit von Applikationen gewährleistet werden, da Abstürze im System automatisch behoben werden.
 
 \subsubsection{Verbreitung}
 Kubernetes ist, allem voran dank der Unterstützung von Google, aktuell eine der am besten unterstützten Container-Orchestrierungs-Systemen. So gibt es unter anderem bei Amazon Web Services (AWS), Microsoft Azure und Google Cloud einfache Konfigrationsoptionen für Kubernetes.
 Ebenfalls haben in den letzten Jahren auch immer mehr kleinere Hosting-Provider damit begonnen, Kuberntes als Dienstleistung anzubieten.
 
 \subsection{Alternativen}
-Es gibt verschiedene Alternativen zu Kubernetes. Im folgenden stellen wir zwei der beanntesten davon vor:
+Es gibt verschiedene Alternativen zu Kubernetes. Im folgenden Abschnitt stellen wir zwei der bekanntesten davon vor:
 
 \subsubsection{Openshift}
-Bei OpenShift handelt es sich um ein Projekt von Red Hat. Im Gegensatz zu Kubernetes ist OpenShift nicht Open-Source sondern wird von Red Hat als kostenpflichtigen Service angeboten. Dabei bassiert dies auf dem Open-Source Tool OKD, was wiederum auf Kubernetes aufbaut.
-OpenShift ist somit im wesentlichen eine Erweiterung zu Kubernetes, die das Deployment und Monitoring vereinfacht. Für Einsteiger bietet dies oft eine einfacheren Einstieg in die Orchestrierungwelt als Kubernetes. Dafür sind die Konfigurationsoptionen für Kubernetes zahlreicher. \cite{cloudowski:openshift}
+Bei OpenShift handelt es sich um ein Projekt von Red Hat. Im Gegensatz zu Kubernetes ist OpenShift nicht Open-Source sondern wird von Red Hat als kostenpflichtigen Service angeboten. Dabei basiert dies auf dem Open-Source Tool OKD, was wiederum auf Kubernetes aufbaut.
+OpenShift ist somit im wesentlichen eine Erweiterung zu Kubernetes, die das Deployment und Monitoring vereinfacht. Für Einsteiger bietet dies oft einen einfacheren Einstieg in die Orchestrierungwelt als Kubernetes. Dafür sind die Konfigurationsoptionen für Kubernetes zahlreicher. \cite{cloudowski:openshift}
 
 \subsubsection{Docker Swarm}
-Docker Swarm ist verwendet als Engine direkt Docker. Dadurch ist die Einrichtung von Swarm meist einfacher als das Aufsetzen eines Kubernetes Clusters. Swarm ist generel simpler zu konfigurieren, da es weniger Funktionalitäten bietet als Kubernetes. Ebenfalls ist kein automatisches Skalieren innerhalb von Swarm möglich. \cite{docker:swarm}
+Docker Swarm ist verwendet direkt Docker als Engine. Dadurch ist die Einrichtung von Swarm meist einfacher als das Aufsetzen eines Kubernetes Clusters. Swarm ist generell simpler zu konfigurieren, da es weniger Funktionalitäten bietet als Kubernetes. Ebenfalls ist kein automatisches Skalieren innerhalb von Swarm möglich. \cite{docker:swarm}
 \clearpage
